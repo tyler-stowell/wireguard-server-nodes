@@ -15,7 +15,7 @@ ListenPort = "server port"
 PrivateKey = "server private key"  
 ###############################################  
   
-The given interface will accept all traffic sent to an address of 10.0.0.x. The PostUp and PostDown sections give it information for how to forward packets and how to receive them, either between peers or to eth0.
+That interface will accept all traffic sent to an address of 10.0.0.x. The PostUp and PostDown sections give it information for how to forward packets and how to receive them, either between peers or to eth0.
 
 Next, the following information needs to be added to the server's wg0.conf for each Peer:
 
