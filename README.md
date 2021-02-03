@@ -46,8 +46,8 @@ This config file tells the wg0 interface to accept traffic from 10.0.0.x, then f
 
 For example, if two clients are created with 10.0.0.2 and 10.0.0.3, the following process allows them to connect:
 
-The user on client 10.0.0.2 calls the command "ssh 10.0.0.3".
-An ssh request is sent to 10.0.0.3:22
-The wg0 interface on client 10.0.0.2 catches this request, encrypts it with <server public key>, and sends the encrypted packet to <server ip address>:<server port>
-The wg0 interface on the server takes this incoming packet, and decrypts it with its own private key. Then, it sees that the packet is intended for 10.0.0.3. So, it encrypts it with the second client's public key and sends it to that client.
-Finally, the client decrypts the packet from the server, and sees that it is intended for itself. So, it keeps the packet.
+1) The user on client 10.0.0.2 calls the command "ssh 10.0.0.3".
+2) An ssh request is sent to 10.0.0.3:22
+3) The wg0 interface on client 10.0.0.2 catches this request, encrypts it with <server public key>, and sends the encrypted packet to <server ip address>:<server port>
+4) The wg0 interface on the server takes this incoming packet, and decrypts it with its own private key. Then, it sees that the packet is intended for 10.0.0.3. So, it encrypts it with the second client's public key and sends it to that client.
+5) Finally, the client decrypts the packet from the server, and sees that it is intended for itself. So, it keeps the packet.
