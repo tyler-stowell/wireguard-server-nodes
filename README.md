@@ -26,9 +26,9 @@ AllowedIPs = 10.0.0."client number"/32
 Endpoint = "client ip address":"client port"  
 ###############################################  
   
-The interface will then forward any traffic on address 10.0.0.<peer number> to <peer ip address>:<peer port>.
-  
-Next, the client needs to be configured with the following information in its wg0.conf file:
+In this case, "client number" is just some unique number to differentiate a client.  
+
+This interface now forwards any traffic on address 10.0.0.<peer number> to <peer ip address>:<peer port>. Next, the client needs to be configured with the following information in its wg0.conf file:
 
 ###############################################  
 [Interface]  
